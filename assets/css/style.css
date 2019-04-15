@@ -4,6 +4,7 @@ text-align: center;
 
 
 
+
 }
 
 img {
@@ -21,4 +22,8 @@ img {
 #random-number {
 
     background-color: lightcyan;
+}
+
+.random {
+    font-family: 'Fascinate Inline', cursive;
 }

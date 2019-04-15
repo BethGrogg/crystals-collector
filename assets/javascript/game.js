@@ -45,7 +45,7 @@ function resetGame () {
 
     getNumbers();
     totalNumber = 0;
-    $('#total').text(totalNumber);
+    $('#total').text("Your total score is: " + totalNumber);
 };
 
 window.onload = function () {
