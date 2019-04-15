@@ -2,6 +2,8 @@ h1 {
 
 text-align: center;
 
+
+
 }
 
 img {
@@ -10,3 +12,13 @@ img {
     height: 100px;
 }
 
+.total-row {
+
+    width: 100%;
+    background-color: lightcyan;
+}
+
+#random-number {
+
+    background-color: lightcyan;
+}

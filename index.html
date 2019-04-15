@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Crystals Collector!</title>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/javascript/game.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -14,39 +14,35 @@
   
 </head>
 <body>
+    <div class="jumbotron bg-info">
+        <h1 class="h1">Crystals Collector!</h1>
+    </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12"></div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Crystals Collector!</h1>
-            </div>
-        </div>
 
         <div class="row">
-            <div class="col-md-9" id="random-number"></div>
-            <div class="col-md-3">
+            <div class="col-md-9 h1 text-center" id="random-number"></div>
+            <div class="col-md-3 bg-info">
                 <div class="row">
-                    <div class="col-md-12" id="wins"></div>
+                    <div class="col-md-12 h2" id="wins"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12" id="losses"></div>
+                    <div class="col-md-12 h2" id="losses"></div>
                 </div>
             </div>
         </div>
 
         <div class="row">
+                <div class="btn-group">
             <div class="col-md-3"><button class="button aqua-button" value="aqua"><img class="img-fluid" src="./assets/images/aqua.jpg"></button></div>
             <div class="col-md-3"><button class="button green-button" value="green"><img class="img-fluid" src="./assets/images/green.jpg"></button></div>
             <div class="col-md-3"><button class="button purple-button" value="purple"><img class="img-fluid" src="./assets/images/purple.jpg"></button></div>
             <div class="col-md-3"><button class="button white-button" value="white"><img class="img-fluid" src="./assets/images/white.jpg"></button></div>
         </div>
+    </div>
    
-        <div class="row">
-            <div class="col-md-12" id="total"></div>
+        <div class="row total-row">
+            <div class="col-md-12 h2" id="total"></div>
         </div>
-
+    </div>
     </body>
     </html>

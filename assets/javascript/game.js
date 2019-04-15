@@ -9,7 +9,7 @@ var losses = 0;
 
 function getNumbers () {
     //to generate random number
-    randomNumber = Math.floor(Math.random() * 120) + 19;
+    randomNumber = Math.floor(Math.random() * 101) + 19;
     console.log("randomNumber: " + randomNumber);
     $('#random-number').text(randomNumber);
     //used to generate the button numbers
@@ -52,6 +52,7 @@ window.onload = function () {
     getNumbers();
     $('#wins').text("Wins: " + wins);
     $('#losses').text("Losses: " + losses);
+    $('#total').text("Your total score is: " + totalNumber);
 };
 
 
@@ -62,28 +63,28 @@ $(document).ready(function() {
     if ($('.aqua-button').on("click", function() {
         totalNumber = totalNumber + aquaNumber;
         console.log(totalNumber);
-        $('#total').text(totalNumber);
+        $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));
 
     if ($('.green-button').on("click", function() {
         totalNumber = totalNumber + greenNumber;
         console.log(totalNumber);
-        $('#total').text(totalNumber);
+        $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));
 
     if ($('.purple-button').on("click", function() {
         totalNumber = totalNumber + purpleNumber;
         console.log(totalNumber);
-        $('#total').text(totalNumber);
+        $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));
 
     if ($('.white-button').on("click", function() {
         totalNumber = totalNumber + whiteNumber;
         console.log(totalNumber);
-        $('#total').text(totalNumber);
+        $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));         
     
