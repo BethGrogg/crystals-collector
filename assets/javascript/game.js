@@ -53,6 +53,7 @@ window.onload = function () {
     $('#wins').text("Wins: " + wins);
     $('#losses').text("Losses: " + losses);
     $('#total').text("Your total score is: " + totalNumber);
+   
 };
 
 

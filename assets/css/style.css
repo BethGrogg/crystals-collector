@@ -13,17 +13,19 @@ img {
     height: 100px;
 }
 
-.total-row {
-
-    width: 100%;
-    background-color: lightcyan;
+.title {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 50px;
 }
 
-#random-number {
 
+
+.container {
     background-color: lightcyan;
 }
 
 .random {
-    font-family: 'Fascinate Inline', cursive;
+    font-family: 'Bungee Inline', cursive;
 }
+
+
