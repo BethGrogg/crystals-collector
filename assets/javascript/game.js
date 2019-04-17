@@ -10,43 +10,45 @@ var losses = 0;
 function getNumbers () {
     //to generate random number
     randomNumber = Math.floor(Math.random() * 101) + 19;
-    console.log("randomNumber: " + randomNumber);
     $('#random-number').text(randomNumber);
+
     //used to generate the button numbers
     purpleNumber = Math.floor(Math.random() * 12) + 1;
-    console.log("purpleNumber: " + purpleNumber);
     aquaNumber = Math.floor(Math.random() * 12) + 1;
-    console.log("aquaNumber: " + aquaNumber);
     whiteNumber = Math.floor(Math.random() * 12) + 1;
-    console.log("whiteNumber: " + whiteNumber);
     greenNumber = Math.floor(Math.random() * 12) + 1;
-    console.log("greenNumber: " + greenNumber); 
+    
 
 }
 
 function checkNumbers () {
-
+    //if the numbers are equal, user wins
     if (totalNumber === randomNumber) {
-        console.log("you won!");
+
         wins++;
         $('#wins').text("Wins: " + wins);
         resetGame();
+    //if their guess is larger than the number, user loses
     } else if (totalNumber > randomNumber) {
-        console.log("you lost");
+        
         losses++;
         $('#losses').text("Losses: " + losses);
         resetGame();
+    //else game continues
     }else {
 
     }
 }
 
+//resets for a new game where new numbers are generated 
+//and the total amount is set back to 0
 function resetGame () {
 
     getNumbers();
     totalNumber = 0;
     $('#total').text("Your total score is: " + totalNumber);
 };
+
 
 window.onload = function () {
     getNumbers();
@@ -57,34 +59,31 @@ window.onload = function () {
 };
 
 
-
+//each time a button is clicked, adds the number associated with that button
+//to the total amount
+//then runs checkNumbers to see if user wins, loses or continues playing
 $(document).ready(function() {
-
 
     if ($('.aqua-button').on("click", function() {
         totalNumber = totalNumber + aquaNumber;
-        console.log(totalNumber);
         $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));
 
     if ($('.green-button').on("click", function() {
         totalNumber = totalNumber + greenNumber;
-        console.log(totalNumber);
         $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));
 
     if ($('.purple-button').on("click", function() {
         totalNumber = totalNumber + purpleNumber;
-        console.log(totalNumber);
         $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));
 
     if ($('.white-button').on("click", function() {
         totalNumber = totalNumber + whiteNumber;
-        console.log(totalNumber);
         $('#total').text("Your total score is: " + totalNumber);
         checkNumbers();
     }));         
