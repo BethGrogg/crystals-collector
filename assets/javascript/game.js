@@ -24,13 +24,15 @@ function getNumbers () {
 function checkNumbers () {
     //if the numbers are equal, user wins
     if (totalNumber === randomNumber) {
-
+        var winningSound = document.getElementById("winAudio");
+        winningSound.play();
         wins++;
         $('#wins').text("Wins: " + wins);
         resetGame();
     //if their guess is larger than the number, user loses
     } else if (totalNumber > randomNumber) {
-        
+        var losingSound = document.getElementById("loseAudio");
+        losingSound.play();
         losses++;
         $('#losses').text("Losses: " + losses);
         resetGame();
